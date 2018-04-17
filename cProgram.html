@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,48 +7,60 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
         <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     </head>
-    <body>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+    <body  ng-controller="mainController">
         <section class="section">
             <div class="container">
-            <h2 class="title">C Language</h2>
+            <h2 class="title"> {{ cProgram.title }} </h2>
             <p class="subtitle">
-                語法補充說明!
+                    {{ cProgram.subtitle }}
             </p>
             </div>
         </section>
         <section>
-            <div class="container">
-                <div class="columns">    
+            <div class="container ">
+                <div class="columns "  ng-repeat="card in cProgram.cardsInfo">    
                     <div class="column card">
                         <div class="card-content">
-                            <p class="title">Hello world!</p>
-                            <p class="subtitle">一個簡單的C程式碼</p>
+                            <p class="title">{{ card.title }}</p>
+                            <p class="subtitle">{{ card.subtitle }}</p>
                         </div>
                         <footer class="card-footer">
                             <p class="card-footer-item">
-                                <span class="button">View Code</span>
+                                <button class="button" ng-click="card.viewCode = card.viewCode ? 0 : 1">View Code</button>
                             </p>
                             <p class="card-footer-item">
-                                <span class="button">說明</span>
+                                <button class="button" ng-click="card.viewInstruction = card.viewInstruction ? 0 : 1">說明</button>
+                                
                             </p>
-                        </footer>
-                    </div>
-                    <div class="column card">
-                        <div class="card-content">
-                            <p class="title">If else </p>
-                            <p class="subtitle">如果...否則...判斷式</p>
-                        </div>
-                        <footer class="card-footer">
-                            <p class="card-footer-item">
-                                <span class="button">View Code</span>
-                            </p>
-                            <p class="card-footer-item">
-                                <span class="button">說明</span>
-                            </p>
+                            <div class="message is-black" style="position: absolute; z-index: 1;" ng-if="card.viewCode">
+                                <div class="message-header">
+                                    <p>Code</p>
+                                    <button class="delete" ng-click="card.viewCode = card.viewCode ? 0 : 1"></button>
+                                </div>
+                                <pre class="message-body">
+                                    {{ card.code }}
+                                </pre>
+                            </div>
+                            <div class="message is-info" style="position: absolute; z-index: 1; margin-right: 0;" ng-if="card.viewInstruction">
+                                <div class="message-header">
+                                    <p>說明</p>
+                                    <button class="delete" ng-click="card.viewInstruction = card.viewInstruction ? 0 : 1"></button>
+                                </div>
+                                <div class="message-body" ng-bind-html="card.instruction">
+                                </div>
+                            </div>
                         </footer>
                     </div>
                 </div>
             </div>
         </section>
     </body>
+
+    <script src="myController.js"></script>
 </html>
