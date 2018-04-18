@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>TCS+</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+        <link rel="stylesheet" href="main.css">
         <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     </head>
 
@@ -13,53 +14,60 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 
-    <body  ng-controller="mainController">
+    <body class="has-background-black-ter" ng-controller="mainController">
         <section class="section">
-            <div class="container">
-            <h2 class="title"> {{ cProgram.title }} </h2>
-            <p class="subtitle">
-                    {{ cProgram.subtitle }}
-            </p>
+            <div class="container has-text-centered">
+                <h2 class="title" style="color:greenyellow; font-size: 52px;"> {{ cProgram.title }} </h2>
+                <p class="subtitle has-text-primary">
+                    <b>{{ cProgram.subtitle }}</b>
+                </p>
             </div>
         </section>
         <section>
             <div class="container ">
                 <div class="columns "  ng-repeat="card in cProgram.cardsInfo">    
-                    <div class="column card">
-                        <div class="card-content">
-                            <p class="title">{{ card.title }}</p>
+                    <div class="column card myCard">
+                        <div class="card-content ">
+                            <p class="title ">{{ card.title }}</p>
                             <p class="subtitle">{{ card.subtitle }}</p>
                         </div>
                         <footer class="card-footer">
-                            <p class="card-footer-item">
-                                <button class="button" ng-click="card.viewCode = card.viewCode ? 0 : 1">View Code</button>
+                            <p class="card-footer-item ">
+                                <button class="button is-primary" ng-click="card.viewCode = card.viewCode ? 0 : 1">View Code</button>
                             </p>
-                            <p class="card-footer-item">
-                                <button class="button" ng-click="card.viewInstruction = card.viewInstruction ? 0 : 1">說明</button>
+                            <p class="card-footer-item ">
+                                <button class="button is-warning" ng-click="card.viewInstruction = card.viewInstruction ? 0 : 1">說明</button>
                                 
                             </p>
-                            <div class="message is-black" style="position: absolute; z-index: 1;" ng-if="card.viewCode">
+                            <div class="message is-black" style="position: absolute; z-index: 2;" ng-if="card.viewCode">
                                 <div class="message-header">
                                     <p>Code</p>
                                     <button class="delete" ng-click="card.viewCode = card.viewCode ? 0 : 1"></button>
                                 </div>
-                                <pre class="message-body">
-                                    {{ card.code }}
-                                </pre>
+                                <pre class="message-body "><code>{{ card.code }}</code></pre>
                             </div>
-                            <div class="message is-info" style="position: absolute; z-index: 1; margin-right: 0;" ng-if="card.viewInstruction">
+                            <div class="message is-info"  style="position: absolute; z-index: 2; margin-left:auto;margin-right: 0;" ng-if="card.viewInstruction">
                                 <div class="message-header">
                                     <p>說明</p>
                                     <button class="delete" ng-click="card.viewInstruction = card.viewInstruction ? 0 : 1"></button>
                                 </div>
-                                <div class="message-body" ng-bind-html="card.instruction">
-                                </div>
+                                <div class="message-body pre " >{{ card.instructions }}</div>
                             </div>
                         </footer>
                     </div>
                 </div>
             </div>
         </section>
+        <footer class="footer">
+            <div class="container">
+              <div class="content has-text-centered">
+                <p>
+                  2018 April developed by <a href="https://www.facebook.com/profile.php?id=100000047621325">Ian Tsai</a>. Look source code on
+                   <a href="https://github.com/bobosheep/EasyStart">Github</a>. 
+                </p>
+              </div>
+            </div>
+          </footer>
     </body>
 
     <script src="myController.js"></script>

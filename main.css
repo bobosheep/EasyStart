@@ -1,0 +1,31 @@
+.myCard:hover{
+    transform: scale(1.01);
+    transition: .3s;
+    z-index: 1;
+}
+.pre{
+    white-space: pre;
+}
+
+@media screen and (max-width:860px){
+    .pre{
+        white-space: normal;
+    }
+}
+
+.overflowScroll{
+    overflow: scroll;
+}
+
+footer{
+    bottom: 0px;
+}
+
+body{
+    background-image: url('img/bg-img.png');
+    background-color: rgb(0, 13, 43);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
