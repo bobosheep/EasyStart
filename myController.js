@@ -1,6 +1,6 @@
 const app = angular.module('myApp', []);
-app.controller("mainController", ["$scope", function($scope){
-    $scope.cProgram = {
+app.controller("mainController", ["$scope", "$http", function($scope, $http){
+    $scope.cProgram1 = {
         "title" : "C start!", 
         "subtitle" : "C 程式語法範例 && 說明!",
         "cardsInfo" : [{
@@ -55,4 +55,10 @@ app.controller("mainController", ["$scope", function($scope){
             "viewInstruction": 0,
         }]
     };
+    $http.get('cProgram.json').then(function (data){
+        $scope.cProgram = data;
+        console.log($scope.cProgram);
+	}, function (err){
+        console.log(err);
+    });
 }]);
