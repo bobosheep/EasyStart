@@ -1,14 +1,13 @@
 # EasyStart
 ### A website for easy Start  with programming
-
-[C語言教學網站連結](https://bobosheep.github.io/EasyStart/cProgram)
+簡單的C入門教學
+[Website](https://bobosheep.github.io/EasyStart/cProgram)
 
 ##   Web UI(On desktop)
 <img src="/img/UIonWeb.png" width="400">
 
 ##   Web UI(PWA on Android mobile)
 <img src="/img/UIonMobile.png" width="250">
-![網站樣貌](/img/UIonMobile.png | width=250)
 
 ### 如何在手機把此網站加到桌面
 1.  用chrome開啟此網站
