@@ -39,7 +39,7 @@
         "title" : "switch", 
         "content" : "挑幾個想要的選項時~", 
         "grammar": "switch (變數名稱或運算式)\n{\n     case 符合數字或字元:\n         do something;\n         break;\n     case 符合數字或字元:\n         do something;\n         break;\n     default:\n         do something;\n}\n", 
-        "code" : "", 
+        "code" : "#include<stdio.h>\n\nint main()\n{\n    int number = 2;\n\n    switch(number)\n    {\n        case 1:\n            printf(\"number is 1\\n\");\n            break;\n        case 2:\n            printf(\"number is 2\\n\");\n            break;\n        case 10:\n            printf(\"number is 10\\n\");\n            break;\n        default:\n            printf(\"I don't know the value of the number\\n\");\n            break;\n    }\n\n    return 0;\n}\n", 
         "instructions" : "",
         "hasGrammar":1,
         "viewCode": 0,
@@ -48,7 +48,7 @@
     },{
         "title" : "for", 
         "content" : "當重複做一樣的事情時...",
-        "grammar": "",  
+        "grammar": "for(變數初始化 ; 條件式  ;  變數遞增或遞減)\n{\n    do something;\n    do something;\n}\n",  
         "code" : "", 
         "instructions" : "",
         "hasGrammar":1,
@@ -58,7 +58,7 @@
     },{
         "title" : "while", 
         "content" : "也要重複做一樣的事情時...", 
-        "grammar": "", 
+        "grammar": "while( 條件式  )\n{\n    do something;\n    do something;\n}\n", 
         "code" : "", 
         "instructions" : "",
         "hasGrammar":1,
