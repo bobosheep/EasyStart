@@ -1,0 +1,25 @@
+{
+    "short_name": "Coding",
+    "name": "Start coding!",
+    "icons": [
+      {
+        "src": "logo1.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      },
+      {
+        "src": "logo1.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "logo1.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "theme_color": "white",
+    "start_url": "/EasyStart/cProgram",
+    "display": "standalone",
+    "orientation": "portrait"
+  }
