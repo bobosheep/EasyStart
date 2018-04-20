@@ -37,8 +37,8 @@
         "viewGrammar": 0
     }, {
         "title" : "switch", 
-        "content" : "挑一個要的選項~", 
-        "grammar": "", 
+        "content" : "挑幾個想要的選項時~", 
+        "grammar": "switch (變數名稱或運算式)\n{\n     case 符合數字或字元:\n         do something;\n         break;\n     case 符合數字或字元:\n         do something;\n         break;\n     default:\n         do something;\n}\n", 
         "code" : "", 
         "instructions" : "",
         "hasGrammar":1,

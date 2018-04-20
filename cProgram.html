@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html lang='en'>
     <head>
-        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="img/logo1.png" />
+        
         <title>C Start!</title>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
         <link rel="stylesheet" href="main.css">
+        <link rel="shortcut icon" type="image/png" href="./img/logo1.png" />
         <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <link rel="manifest" href="manifest.json">
     </head>
 
     
@@ -15,8 +19,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 
-    <body class="has-background-black-ter" ng-controller="mainController">
-        
+    <body  ng-app="myApp" class="has-background-black-ter" ng-controller="mainController">
         <section class="section">
             <div class="container myheader">
                 <figure class="image is-128x128" style="position: relative;float: left;">
@@ -40,7 +43,7 @@
                 <div class="columns mycard">
                     <div class="column card">
                         <div class="card-header" >
-                            <p class="card-header-title title">{{ cProgram.beginInfo.title }}</p>
+                            <p class="card-header-title title" >{{ cProgram.beginInfo.title }}</p>
                         </div>
                         <div class="card-content">
                             <p>{{ cProgram.beginInfo.content }}</p>
@@ -72,13 +75,13 @@
                         
                         <header class="card-header" >
                             <p class="card-header-title title">{{ card.title }}</p>
-                            <span class="icon">
+                            <!--span class="icon">
                                 <i class="fas fa-angle-down" aria-hidden="true"></i>
-                            </span>
+                            </span-->
                         </header>
                         <div class="card-content">
                             <p>{{ card.content }}</p>
-                        </>
+                        </div>
 
                         <footer class="card-footer">
                             <p class="card-footer-item" ng-if="card.hasGrammar">
@@ -160,6 +163,7 @@
             </div>
           </footer>
     </body>
-
     <script src="myController.js"></script>
+    <script src="app.js"></script>
+   
 </html>

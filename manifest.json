@@ -19,7 +19,7 @@
       }
     ],
     "theme_color": "white",
-    "start_url": "/EasyStart/cProgram",
+    "start_url": "/EasyStart/cProgram.html",
     "display": "standalone",
     "orientation": "portrait"
-  }
+}

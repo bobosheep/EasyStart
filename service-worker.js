@@ -1,11 +1,12 @@
-var cacheName = 'myPWA';
+var cacheName = 'EasyStart';
 var filesToCache = [
     '/',
+    '/myController.js',
     '/cProgram.html',
     '/img/logo1.png', 
-    'bg-img2.jpg',
+    '/img/bg-img2.jpg',
     '/main.css',
-    '/myController.js'
+    
 ];
 
 self.addEventListener('install', function(e) {
