@@ -25,6 +25,15 @@
         "viewCode": 0,
         "viewInstruction": 0, 
         "viewGrammar": 0
+    },{
+        "title" : "Input Output", 
+        "content" : "來點有趣的，跟電腦來點小互動!",
+        "code" : "",
+        "instructions" : "",
+        "hasGrammar":0,
+        "viewCode": 0,
+        "viewInstruction": 0, 
+        "viewGrammar": 0
     }, {
         "title" : "If else", 
         "content" : "如果...否則...判斷式", 
