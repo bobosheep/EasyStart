@@ -1,1 +1,2 @@
-exampleCode.c
+sampleCode/*.exe
+sampleCode/*.o
