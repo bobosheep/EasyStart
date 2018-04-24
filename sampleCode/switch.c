@@ -2,7 +2,9 @@
 
 int main()
 {
-    int number = 2;
+    int number;
+
+    scanf("%d", &number);
 
     switch(number)
     {
@@ -11,13 +13,12 @@ int main()
             break;
         case 2:
             printf("number is 2\n");
-            /*  螢幕會顯示這行 */
             break;
         case 10:
             printf("number is 10\n");
             break;
         default:
-            printf("I don't know the value of the number\n");
+            printf("Your number is not 1, 2 or 10.\n");
             break;
     }
 
