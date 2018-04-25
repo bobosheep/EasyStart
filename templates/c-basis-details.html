@@ -1,0 +1,81 @@
+<div class="columns mycard  "  ng-repeat="card in cProgram.cardsInfo" ng-if="visibilty.Cbasis">    
+    <!--基本細項-->
+    <div class="column card mydetails-bg">
+        
+        <header class="card-header" >
+            <p class=" card-header-title title">{{ card.title }}</p>
+            <!--span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span-->
+        </header>
+        <div class="card-content" style="color: midnightblue;">
+            <p>{{ card.content }}</p>
+        </div>
+
+        <footer class="card-footer">
+            <p class="card-footer-item" ng-if="card.hasGrammar">
+                <button class="button is-danger" ng-click="card.viewGrammar = card.viewGrammar ? 0 : 1">
+                    <span class="icon is-medium">
+                        <i class="fas fa-poo"></i>
+                    </span>
+                    <span>語法</span>
+                </button>
+            </p>
+            <p class="card-footer-item ">
+                <button class="button is-primary" ng-click="card.viewCode = card.viewCode ? 0 : 1">
+                    <span class="icon is-medium">
+                        <i class="fas fa-code "></i>
+                    </span>
+                <span>View Code</span>
+                </button>
+            </p>
+            <p class="card-footer-item ">
+                <button class="button is-warning" ng-click="card.viewInstruction = card.viewInstruction ? 0 : 1">
+                    <span class="icon is-medium">
+                        <i class="fas fa-info "></i>
+                    </span>
+                    <span>說明</span>
+                </button>
+                
+            </p>
+        </footer>
+
+        <!--語法欄位-->
+        <div class="container">
+            <div class="message is-link mymessage"  ng-if="card.viewGrammar">
+                <div class="message-header">
+                    <span class="icon is-medium">
+                        <i class="fas fa-poo"></i>
+                    </span>
+                    <p> 語法</p>
+                    <button class="delete" ng-click="card.viewGrammar = card.viewGrammar ? 0 : 1"></button>
+                </div>
+                <pre class="message-body "><code>{{ card.grammar }}</code></pre>
+            </div>
+            <!--code欄位-->
+            <div class="message is-black mymessage" ng-if="card.viewCode">
+                <div class="message-header">
+                    <span class="icon is-medium">
+                        <span class="fa-stack">
+                        <i class="fas fa-code mdi mdi-24px"></i>
+                        </span>
+                    </span>
+                    <p>Code</p>
+                    <button class="delete" ng-click="card.viewCode = card.viewCode ? 0 : 1"></button>
+                </div>
+                <pre class="message-body "><code>{{ card.code }}</code></pre>
+            </div>
+            <!--說明欄位-->
+            <div class="message is-info mymessage"   ng-if="card.viewInstruction">
+                <div class="message-header">
+                    <span class="icon is-medium">
+                        <i class="fas fa-info-circle "></i>
+                    </span>
+                    <p>說明</p>
+                    <button class="delete" ng-click="card.viewInstruction = card.viewInstruction ? 0 : 1"></button>
+                </div>
+                <div class="message-body pre " >{{ card.instructions }}</div>
+            </div>
+        </div>
+    </div><!--column-->
+</div><!--columns-->  
