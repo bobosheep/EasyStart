@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en'  >
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -35,121 +35,25 @@
             </div>
         </section>
 
-
         <section style="margin-top: 20px;">
+
             <div class="container ">
 
                 <!--Cards-->
-                <div class="columns mycard" >
-                    <div class="column card">
-                        <div class="card-header" >
-                            <p class="card-header-title title" >{{ cProgram.beginInfo.title }}</p>
-                        </div>
-                        <div class="card-content">
-                            <p>{{ cProgram.beginInfo.content }}</p>
-                            <p>
-                                <span class="icon is-medium is-info">
-                                    <i class="fab fa-windows"></i>
-                                </span>
-                                <span class="subtitle has-text-dark">Windows :</span><br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;{{ cProgram.beginInfo.windowsContent }}
-                            </p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.codeblocks.org/">Code::Blocks官網</a></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://coder.tw/?p=3908">別人的Code::Blocks下載安裝教學</a></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.bloodshed.net/devcpp.html">Dev-C++官網</a></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://selfinquiring.hatenablog.com/entry/2016/03/18/204352/">別人的Dev-C++下載安裝教學</a></p>
-                            <p>
-                                <span class="icon is-medium is-warning">
-                                    <i class="fab fa-linux"></i>
-                                </span>
-                                <span class="subtitle has-text-dark">Linux :</span><br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;{{ cProgram.beginInfo.linuxContent }}
-                            </p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://linux.vbird.org/linux_basic/0310vi.php#vi_vim_why">鳥哥的linux私房菜-vim程式編輯器</a></p>
-                        </div>
-                    </div>
+                <c-begin-info></c-begin-info>
+                
+                <div menu>
                 </div>
 
-                <div class="columns mycard "  ng-repeat="card in cProgram.cardsInfo" style="margin-top: 15px;">    
-                    <div class="column card ">
-                        
-                        <header class="card-header" >
-                            <p class="card-header-title title">{{ card.title }}</p>
-                            <!--span class="icon">
-                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                            </span-->
-                        </header>
-                        <div class="card-content">
-                            <p>{{ card.content }}</p>
-                        </div>
-
-                        <footer class="card-footer">
-                            <p class="card-footer-item" ng-if="card.hasGrammar">
-                                <button class="button is-danger" ng-click="card.viewGrammar = card.viewGrammar ? 0 : 1">
-                                    <span class="icon is-medium">
-                                        <i class="fas fa-poo"></i>
-                                    </span>
-                                    <span>語法</span>
-                                </button>
-                            </p>
-                            <p class="card-footer-item ">
-                                <button class="button is-primary" ng-click="card.viewCode = card.viewCode ? 0 : 1">
-                                    <span class="icon is-medium">
-                                        <i class="fas fa-code "></i>
-                                    </span>
-                                <span>View Code</span>
-                                </button>
-                            </p>
-                            <p class="card-footer-item ">
-                                <button class="button is-warning" ng-click="card.viewInstruction = card.viewInstruction ? 0 : 1">
-                                    <span class="icon is-medium">
-                                        <i class="fas fa-info "></i>
-                                    </span>
-                                    <span>說明</span>
-                                </button>
-                                
-                            </p>
-                        </footer>
-
-                        <!--語法欄位-->
-                        <div class="message is-link " style="position: absolute; z-index: 2; " ng-if="card.viewGrammar">
-                            <div class="message-header">
-                                <span class="icon is-medium">
-                                    <i class="fas fa-poo"></i>
-                                </span>
-                                <p> 語法</p>
-                                <button class="delete" ng-click="card.viewGrammar = card.viewGrammar ? 0 : 1"></button>
-                            </div>
-                            <pre class="message-body "><code>{{ card.grammar }}</code></pre>
-                        </div>
-                        <!--code欄位-->
-                        <div class="message is-black" style="position: absolute; z-index: 3;" ng-if="card.viewCode">
-                            <div class="message-header">
-                                <span class="icon is-medium">
-                                    <span class="fa-stack">
-                                    <i class="fas fa-code mdi mdi-24px"></i>
-                                    </span>
-                                </span>
-                                <p>Code</p>
-                                <button class="delete" ng-click="card.viewCode = card.viewCode ? 0 : 1"></button>
-                            </div>
-                            <pre class="message-body "><code>{{ card.code }}</code></pre>
-                        </div>
-                        <!--說明欄位-->
-                        <div class="message is-info"  style="position: absolute; z-index: 2; " ng-if="card.viewInstruction">
-                            <div class="message-header">
-                                <span class="icon is-medium">
-                                    <i class="fas fa-info-circle "></i>
-                                </span>
-                                <p>說明</p>
-                                <button class="delete" ng-click="card.viewInstruction = card.viewInstruction ? 0 : 1"></button>
-                            </div>
-                            <div class="message-body pre " >{{ card.instructions }}</div>
-                        </div>
-                    </div><!--column-->
-                </div><!--columns-->
+                <c-basis-details></c-basis-details>
+                
+            
             </div>
+
+
         </section>
+
+        
 
         <!--我的資訊-->
         <footer class="footer">
@@ -163,7 +67,10 @@
             </div>
           </footer>
     </body>
+    
+    
     <script src="myController.js"></script>
+    <script src="myDirective.js"></script>
     <script src="app.js"></script>
    
 </html>

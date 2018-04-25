@@ -1,11 +1,23 @@
 {
     "title" : "C start!", 
-    "subtitle" : "C 程式語法範例 && 說明!",
+    "subtitle" : "C 程式--簡單上手",
     "beginInfo" : {
         "title" : "code練功環境",
         "content" : "練習寫程式總需要一個地方可以練習吧，但在哪裡呢? 才不告訴你勒。嘿嘿，開個小玩笑，下面是對不同作業系統(OS)有不同的練習環境。",
         "windowsContent" : "\t以寫一個簡單C程式來講，Windows我最推薦的IDE(Integrated Development Environment 整合開發環境)是Code::blocks，因為我都用它!當然在以前也用過另外一個IDE -- Dev-C++，不過忘記為什麼跳槽到Code::Blocks了。", 
         "linuxContent" : "\t這邊以文字介面來推薦，linux系統有內建文書編輯器 vi (類似windows的記事本)還有它的進階版的vi vim(通常要自己安裝，安裝指令sudo apt install vim)。我個人在linux\"文字環境\"下都是使用vim。vi和vim的使用方式可以參考鳥哥(對linux系統不熟的人也可以參考)。"
+    },
+    "Cbasis":{
+        "title":"基本語法",
+        "content":"變數宣告, if else, switch, for, while..."
+    },
+    "practices":{
+        "title":"練習一下",
+        "content":"coming soon"
+    },
+    "problems":{
+        "title":"常見錯誤 & 問題",
+        "content":"coming soon"
     },
     "cardsInfo" : [{
         "title" : "Hello world!", 

@@ -7,6 +7,7 @@
 .mycard{
     -webkit-animation: cardmove 1s 1 ease-out; /* Chrome, Safari, Opera */
     animation: cardmove 1s 1 ease-out;
+    margin-top: 15px;
 }
 
 .message{
@@ -37,6 +38,9 @@
     .pre{
         white-space: normal;
     }
+    .mymenu-title{
+        margin: 0 10 0 10;
+    }
 }
 
 .overflowScroll{
@@ -54,4 +58,40 @@ body{
     background-position: center;
     background-repeat: repeat-y;
     background-size: auto;
+}
+
+.mymenu-title{
+    color: rgb(250, 241, 121);
+    background: url('http://www.systhread.net/texts/200511gimp-img/ab_plasma.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+.mymenu-bg{
+    background: url('https://image.freepik.com/free-vector/bright-background-with-dots_1055-3132.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+.mydetails-bg{
+    background: url('https://cdn2.slidemodel.com/wp-content/uploads/7243-01-low-poly-background-16x9-1.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+.mymessage{
+    position: absolute;
+    z-index: 2; 
+}
+
+@media screen and (min-width:860px){
+    .mymessage:last-child{
+        left:500px;
+    }
+    .message:nth-child(2){
+        left: 100px;
+    }
+    
+    
+    .mymessage:first-child{
+        left:0;
+        right: auto;
+    }
 }
